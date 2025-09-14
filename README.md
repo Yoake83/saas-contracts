@@ -1,12 +1,44 @@
-# React + Vite
+# SaaS Contracts Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Tailwind CSS web application for managing SaaS contracts.  
+This project was built as part of the **UI/UX Assignment**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
 
-## Expanding the ESLint configuration
+- **Authentication**
+  - Simple login with mock JWT (password = `test123`)
+  - Redirect unauthenticated users to login
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Dashboard**
+  - Sidebar navigation (Contracts, Insights, Reports, Settings)
+  - Topbar with Upload button and Logout
+  - Contracts table with:
+    - Search by contract name or parties
+    - Filters for status and risk
+    - Pagination (10 per page)
+    - Loading / Error / Empty states
+
+- **Contract Details**
+  - Metadata: name, parties, expiry, status, risk
+  - Clauses with summaries and confidence scores
+  - AI Insights with severity labels
+  - Evidence drawer that slides in/out
+
+- **File Upload**
+  - Upload modal with drag & drop or browse
+  - Progress bar for each file
+  - Success / Error / Cancel states
+
+
+
+## Tech Stack
+
+- React (functional components, hooks)
+- React Router v6
+- Tailwind CSS
+- Context API (for state management)
+- Vite (build tool)
+- Mock API (static JSON in `/public`)
+
